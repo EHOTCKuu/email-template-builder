@@ -1,0 +1,29 @@
+.switch {
+  display: inline-flex;
+  gap: $space-xxs;
+  padding: $space-xxs;
+  background-color: $color-panel-sunken;
+  border: $border-width solid $color-border;
+  border-radius: $radius-sm;
+}
+
+.option {
+  padding: $space-xs $space-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+  cursor: pointer;
+  background-color: transparent;
+  border: $border-width solid transparent;
+  border-radius: $radius-xs;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+
+  &[aria-pressed='true'] {
+    color: $color-text-on-accent;
+    background-color: $color-accent-strong;
+    border-color: $color-accent-active;
+  }
+}

@@ -1,0 +1,39 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  gap: $space-md;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  padding: 0 $space-md;
+  background-color: $color-panel-sunken;
+  border-bottom: $border-width solid $color-border;
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.actions {
+  display: flex;
+  gap: $space-xs;
+  align-items: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  padding: $space-md;
+  overflow: auto;
+}

@@ -1,0 +1,39 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  color: $color-text-secondary;
+  cursor: pointer;
+  background-color: $color-surface;
+  border: $border-width solid $color-border-strong;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-inset-highlight;
+  transition:
+    background-color $duration-fast $easing-standard,
+    border-color $duration-fast $easing-standard;
+
+  &:hover:not(:disabled) {
+    color: $color-accent-strong;
+    background-color: $color-accent-soft;
+    border-color: $color-accent-soft-border;
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: $shadow-inset-press;
+  }
+
+  &:disabled {
+    color: $color-text-muted;
+    cursor: not-allowed;
+    opacity: 60%;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  font-size: $font-size-sm;
+  line-height: 1;
+}

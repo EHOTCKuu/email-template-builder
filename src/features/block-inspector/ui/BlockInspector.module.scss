@@ -1,0 +1,33 @@
+.inspector {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.blockType {
+  margin: 0;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: $font-size-sm;
+  line-height: $line-height-tight;
+  color: $color-text-muted;
+}

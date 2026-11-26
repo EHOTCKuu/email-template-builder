@@ -1,0 +1,65 @@
+@use './variables' as *;
+
+:root {
+  color-scheme: light;
+
+  --color-accent: #{$color-accent};
+  --color-accent-hover: #{$color-accent-hover};
+  --color-accent-active: #{$color-accent-active};
+  --color-accent-soft: #{$color-accent-soft};
+  --color-panel: #{$color-panel};
+  --color-surface: #{$color-surface};
+  --color-toolbar: #{$color-toolbar};
+  --color-border: #{$color-border};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-danger: #{$color-danger};
+  --color-success: #{$color-success};
+  --layout-toolbar-height: #{$layout-toolbar-height};
+  --layout-layers-panel-width: #{$layout-layers-panel-width};
+  --layout-inspector-panel-width: #{$layout-inspector-panel-width};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-ui;
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+  color: $color-text-primary;
+  background-color: $color-panel;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid $color-border-focus;
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: $duration-instant;
+    animation-duration: $duration-instant;
+  }
+}

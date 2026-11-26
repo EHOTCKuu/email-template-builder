@@ -1,0 +1,67 @@
+@use './variables' as *;
+
+@mixin focus-ring {
+  outline: 2px solid $color-border-focus;
+  outline-offset: 1px;
+}
+
+@mixin focus-ring-inset {
+  outline: 2px solid $color-border-focus;
+  outline-offset: -2px;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
+
+@mixin panel-surface {
+  background-color: $color-panel;
+  border: $border-width solid $color-border;
+}
+
+@mixin raised-surface {
+  background-color: $color-surface;
+  border: $border-width solid $color-border;
+  box-shadow: $shadow-panel-drop;
+}
+
+@mixin bevel-button {
+  border: $border-width solid $color-border-strong;
+  box-shadow: $shadow-inset-highlight;
+}
+
+@mixin bevel-button-pressed {
+  box-shadow: $shadow-inset-press;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin compact-scrollbar {
+  scrollbar-color: $color-border-strong $color-panel;
+  scrollbar-width: thin;
+}
+
+@mixin from-breakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin reduced-motion-safe {
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: $duration-instant;
+    animation-duration: $duration-instant;
+  }
+}

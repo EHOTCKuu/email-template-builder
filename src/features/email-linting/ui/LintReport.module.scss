@@ -1,0 +1,53 @@
+.report {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.summary {
+  margin: 0;
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.issue {
+  display: flex;
+  gap: $space-xs;
+  width: 100%;
+  padding: $space-xs $space-sm;
+  font-size: $font-size-xs;
+  line-height: $line-height-tight;
+  color: $color-text-primary;
+  text-align: left;
+  cursor: pointer;
+  background-color: $color-surface;
+  border: $border-width solid $color-border;
+  border-radius: $radius-xs;
+}
+
+.issueError {
+  border-color: $color-danger;
+}
+
+.issueWarning {
+  border-color: $color-warning;
+}
+
+.severity {
+  font-weight: $font-weight-bold;
+}
+
+.ok {
+  margin: 0;
+  font-size: $font-size-xs;
+  color: $color-success;
+}

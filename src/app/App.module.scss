@@ -1,0 +1,59 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $color-panel;
+}
+
+.toolbar {
+  display: flex;
+  gap: $space-xl;
+  align-items: center;
+  justify-content: space-between;
+  height: $layout-toolbar-height;
+  padding: 0 $space-xl;
+  background-color: $color-toolbar;
+  border-bottom: $border-width solid $color-toolbar-border;
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-toolbar-text;
+}
+
+.workspace {
+  display: grid;
+  flex: 1;
+  grid-template-columns: $layout-layers-panel-width 1fr $layout-inspector-panel-width;
+  min-height: 0;
+}
+
+.layersPanel {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background-color: $color-panel;
+  border-right: $border-width solid $color-border;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  padding: $space-xl;
+  overflow: auto;
+  background-color: $color-panel-sunken;
+}
+
+.canvasToolbar {
+  display: flex;
+  justify-content: center;
+}
+
+.inspectorPanel {
+  overflow: auto;
+  background-color: $color-panel;
+  border-left: $border-width solid $color-border;
+}

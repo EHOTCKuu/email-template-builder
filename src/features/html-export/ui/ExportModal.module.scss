@@ -1,0 +1,57 @@
+.tabs {
+  display: flex;
+  gap: $space-xs;
+}
+
+.tab {
+  padding: $space-xs $space-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+  cursor: pointer;
+  background-color: $color-panel;
+  border: $border-width solid $color-border;
+  border-radius: $radius-xs;
+
+  &[aria-selected='true'] {
+    color: $color-text-on-accent;
+    background-color: $color-accent-strong;
+    border-color: $color-accent-active;
+  }
+}
+
+.code {
+  width: 100%;
+  min-height: 240px;
+  padding: $space-sm;
+  font-family: $font-family-mono;
+  font-size: $font-size-xs;
+  line-height: $line-height-tight;
+  color: $color-text-primary;
+  resize: vertical;
+  background-color: $color-panel-sunken;
+  border: $border-width solid $color-border;
+  border-radius: $radius-xs;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  align-items: center;
+}
+
+.importLabel {
+  display: inline-flex;
+  gap: $space-xs;
+  align-items: center;
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  cursor: pointer;
+}
+
+.importError {
+  margin: 0;
+  font-size: $font-size-xs;
+  color: $color-danger;
+}

@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xl;
+  background-color: $color-overlay;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  max-height: 82vh;
+  overflow: hidden;
+  background-color: $color-surface;
+  border: $border-width solid $color-border-strong;
+  border-radius: $radius-md;
+  box-shadow: $shadow-modal;
+}
+
+.header {
+  display: flex;
+  gap: $space-md;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  padding: 0 $space-md;
+  background-color: $color-toolbar;
+  border-bottom: $border-width solid $color-toolbar-border;
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $color-toolbar-text;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  padding: $space-lg;
+  overflow: auto;
+}

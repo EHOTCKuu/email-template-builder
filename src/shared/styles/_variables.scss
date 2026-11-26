@@ -1,0 +1,93 @@
+$color-accent: #4a9e46;
+$color-accent-hover: #3c8438;
+$color-accent-active: #2e6b2b;
+$color-accent-strong: #2e6b2b;
+$color-accent-soft: #e6f4e5;
+$color-accent-soft-border: #7bbf77;
+
+$color-panel: #f2f4f3;
+$color-panel-sunken: #e8ebe9;
+$color-surface: #ffffff;
+$color-toolbar: #263228;
+$color-toolbar-border: #3a4a3d;
+$color-toolbar-text: #d7e2d9;
+$color-toolbar-text-muted: #9dafa1;
+
+$color-border: #c8d1cc;
+$color-border-strong: #a9b5ae;
+$color-border-focus: $color-accent-strong;
+
+$color-text-primary: #1d241f;
+$color-text-secondary: #5a665e;
+$color-text-muted: #616d66;
+$color-text-on-accent: #ffffff;
+
+$color-success: #2e6b2b;
+$color-success-soft: #e6f4e5;
+$color-warning: #7a5300;
+$color-warning-soft: #fbf1dc;
+$color-danger: #a0271c;
+$color-danger-soft: #fbe9e6;
+$color-info: #1f5a73;
+$color-info-soft: #e4f1f6;
+
+$color-overlay: rgb(38 50 40 / 48%);
+
+$shadow-inset-highlight: inset 0 1px 0 rgb(255 255 255 / 55%);
+$shadow-inset-press: inset 0 1px 2px rgb(38 50 40 / 24%);
+$shadow-panel-drop: 0 1px 0 rgb(38 50 40 / 8%);
+$shadow-popover: 0 2px 6px rgb(38 50 40 / 18%);
+$shadow-modal: 0 10px 28px rgb(38 50 40 / 28%);
+$shadow-focus: 0 0 0 2px $color-surface, 0 0 0 4px $color-accent-strong;
+
+$font-family-ui: "Segoe UI", tahoma, verdana, arial, sans-serif;
+$font-family-mono: "Consolas", "Courier New", monospace;
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-md: 13px;
+$font-size-lg: 15px;
+$font-size-xl: 18px;
+$line-height-tight: 1.25;
+$line-height-base: 1.45;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-sm: 6px;
+$space-md: 8px;
+$space-lg: 12px;
+$space-xl: 16px;
+$space-xxl: 24px;
+$space-xxxl: 32px;
+
+$radius-xs: 2px;
+$radius-sm: 3px;
+$radius-md: 4px;
+$radius-none: 0;
+
+$border-width: 1px;
+
+$layout-toolbar-height: 44px;
+$layout-layers-panel-width: 232px;
+$layout-inspector-panel-width: 304px;
+$layout-canvas-mobile-width: 375px;
+$layout-canvas-desktop-width: 600px;
+
+$duration-instant: 90ms;
+$duration-fast: 140ms;
+$duration-slow: 220ms;
+$easing-standard: ease-out;
+$easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+$z-canvas: 1;
+$z-panel: 10;
+$z-toolbar: 20;
+$z-popover: 30;
+$z-overlay: 40;
+$z-modal: 50;
+$z-toast: 60;
+
+$breakpoint-compact: 1024px;
+$breakpoint-wide: 1440px;

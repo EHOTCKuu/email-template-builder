@@ -1,0 +1,82 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-css-modules",
+    "stylelint-config-recess-order"
+  ],
+  "plugins": ["stylelint-declaration-strict-value", "stylelint-scss"],
+  "rules": {
+    "color-no-hex": true,
+    "color-named": "never",
+    "color-function-notation": "modern",
+    "alpha-value-notation": "percentage",
+    "color-hex-length": "long",
+    "function-disallowed-list": ["rgb", "rgba", "hsl", "hsla"],
+    "declaration-no-important": true,
+    "selector-max-id": 0,
+    "selector-max-compound-selectors": 3,
+    "selector-max-specificity": "0,4,0",
+    "max-nesting-depth": 3,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]*$",
+    "custom-property-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "scss/at-mixin-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "scss/at-function-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "scss/percent-placeholder-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "scss/no-global-function-names": true,
+    "scss/at-use-no-unnamespaced": null,
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "color",
+        "background-color",
+        "border-color",
+        "border-top-color",
+        "border-right-color",
+        "border-bottom-color",
+        "border-left-color",
+        "outline-color",
+        "text-decoration-color",
+        "caret-color",
+        "fill",
+        "stroke",
+        "box-shadow"
+      ],
+      {
+        "ignoreValues": [
+          "none",
+          "transparent",
+          "currentColor",
+          "inherit",
+          "initial",
+          "unset",
+          "auto"
+        ],
+        "disableFix": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/shared/styles/**/*.scss"],
+      "rules": {
+        "color-no-hex": null,
+        "color-named": null,
+        "function-disallowed-list": null,
+        "scale-unlimited/declaration-strict-value": null,
+        "scss/dollar-variable-pattern": null,
+        "scss/dollar-variable-empty-line-before": null,
+        "selector-max-id": null,
+        "selector-max-specificity": null
+      }
+    },
+    {
+      "files": ["**/*.module.scss"],
+      "rules": {
+        "selector-pseudo-class-no-unknown": [
+          true,
+          { "ignorePseudoClasses": ["global", "local"] }
+        ]
+      }
+    }
+  ]
+}

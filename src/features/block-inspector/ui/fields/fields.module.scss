@@ -1,0 +1,39 @@
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: $space-xs $space-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  background-color: $color-surface;
+  border: $border-width solid $color-border-strong;
+  border-radius: $radius-xs;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.textarea {
+  font-family: $font-family-ui;
+  resize: vertical;
+}
+
+.color {
+  width: 100%;
+  height: 26px;
+  padding: $space-xxs;
+  cursor: pointer;
+  background-color: $color-surface;
+  border: $border-width solid $color-border-strong;
+  border-radius: $radius-xs;
+}
+
+.checkbox {
+  display: flex;
+  gap: $space-xs;
+  align-items: center;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  cursor: pointer;
+}

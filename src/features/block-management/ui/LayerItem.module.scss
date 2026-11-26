@@ -1,0 +1,50 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: $space-xs;
+  align-items: center;
+  padding: $space-xs;
+  background-color: $color-surface;
+  border: $border-width solid $color-border;
+  border-radius: $radius-sm;
+}
+
+.select {
+  display: flex;
+  gap: $space-sm;
+  align-items: center;
+  min-width: 0;
+  padding: $space-xs $space-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+  border: $border-width solid transparent;
+  border-radius: $radius-xs;
+
+  &:hover {
+    background-color: $color-accent-soft;
+  }
+}
+
+.selectActive {
+  background-color: $color-accent-soft;
+  border-color: $color-accent-soft-border;
+}
+
+.order {
+  min-width: 16px;
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  text-align: right;
+}
+
+.label {
+  @include truncate;
+}
+
+.controls {
+  display: flex;
+  gap: $space-xxs;
+}

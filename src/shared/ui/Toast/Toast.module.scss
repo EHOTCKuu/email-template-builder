@@ -1,0 +1,14 @@
+.toast {
+  position: fixed;
+  right: $space-xl;
+  bottom: $space-xl;
+  z-index: $z-toast;
+  padding: $space-md $space-xl;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-on-accent;
+  background-color: $color-accent-strong;
+  border: $border-width solid $color-accent-active;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-popover;
+}

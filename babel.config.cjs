@@ -1,0 +1,7 @@
+module.exports = {
+  plugins: [
+    ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
+    '@babel/plugin-transform-modules-commonjs',
+  ],
+  presets: ['@babel/preset-typescript'],
+};
