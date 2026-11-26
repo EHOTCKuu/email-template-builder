@@ -7,23 +7,32 @@ const scssModulePrelude = [
   '@use "shared/styles/mixins" as *;',
 ].join('\n');
 
-export default defineConfig({
-  base: '/email-template-builder/',
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+const GITHUB_PAGES_BASE = '/email-template-builder/';
+
+export default defineConfig(({ command }) => {
+  const base = command === 'build' ? GITHUB_PAGES_BASE : '/';
+
+  return {
+    base,
+    define: {
+      __PUBLIC_BASE_URL__: JSON.stringify(base),
     },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        loadPaths: ['src'],
-        additionalData: (source: string, filePath: string) =>
-          filePath.includes('shared/styles')
-            ? source
-            : `${scssModulePrelude}\n${source}`,
+    plugins: [react()],
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-  },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          loadPaths: ['src'],
+          additionalData: (source: string, filePath: string) =>
+            filePath.includes('shared/styles')
+              ? source
+              : `${scssModulePrelude}\n${source}`,
+        },
+      },
+    },
+  };
 });

@@ -1,4 +1,9 @@
+import { PUBLIC_BASE_URL } from '@/shared/config/constants';
 import type { EmailTemplateState } from '../model/types';
+
+const LOGO_URL = `${PUBLIC_BASE_URL}images/logo.svg`;
+const HERO_URL = `${PUBLIC_BASE_URL}images/hero.svg`;
+const PRODUCT_URL = `${PUBLIC_BASE_URL}images/product.svg`;
 
 export const DEFAULT_EMAIL_TEMPLATE: EmailTemplateState = {
   globalSettings: {
@@ -18,7 +23,7 @@ export const DEFAULT_EMAIL_TEMPLATE: EmailTemplateState = {
       content: {
         title: 'GameStore',
         subtitle: 'Игровые новинки и скидки каждую неделю',
-        logoUrl: '/images/logo.svg',
+        logoUrl: LOGO_URL,
         backgroundColor: '#263228',
         textColor: '#FFFFFF',
         align: 'center',
@@ -28,7 +33,7 @@ export const DEFAULT_EMAIL_TEMPLATE: EmailTemplateState = {
       id: 'hero-default',
       type: 'hero',
       content: {
-        imageUrl: '/images/hero.svg',
+        imageUrl: HERO_URL,
         alt: 'Обложка новой игры недели',
         headline: 'Новая игра недели',
         subheadline: 'Скидка 60% на старте продаж',
@@ -64,7 +69,7 @@ export const DEFAULT_EMAIL_TEMPLATE: EmailTemplateState = {
       id: 'product-card-default',
       type: 'productCard',
       content: {
-        imageUrl: '/images/product.svg',
+        imageUrl: PRODUCT_URL,
         alt: 'Обложка игры Neon Runner',
         name: 'Neon Runner',
         description: 'Динамичный раннер с кооперативом до четырёх игроков.',

@@ -1,4 +1,8 @@
+declare const __PUBLIC_BASE_URL__: string;
+
 export const APP_TITLE = 'Email Template Builder';
+
+export const PUBLIC_BASE_URL = typeof __PUBLIC_BASE_URL__ === 'undefined' ? '/' : __PUBLIC_BASE_URL__;
 
 export const EMAIL_VIEWPORT_WIDTHS = {
   desktop: 600,

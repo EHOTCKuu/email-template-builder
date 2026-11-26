@@ -1,3 +1,4 @@
+import { PUBLIC_BASE_URL } from '@/shared/config/constants';
 import type {
   ButtonBlock,
   EmailBlock,
@@ -18,6 +19,10 @@ interface BlockTypeDescriptor<TContent> {
 
 const DEFAULT_ALIGN: EmailTextAlign = 'left';
 
+const LOGO_URL = `${PUBLIC_BASE_URL}images/logo.svg`;
+const HERO_URL = `${PUBLIC_BASE_URL}images/hero.svg`;
+const PRODUCT_URL = `${PUBLIC_BASE_URL}images/product.svg`;
+
 const BLOCK_TYPE_DESCRIPTORS: {
   [TType in EmailBlockType]: BlockTypeDescriptor<EmailBlockContentByType[TType]>;
 } = {
@@ -26,7 +31,7 @@ const BLOCK_TYPE_DESCRIPTORS: {
     createContent: () => ({
       title: 'Новый заголовок',
       subtitle: 'Короткое описание под заголовком',
-      logoUrl: 'https://placehold.co/160x40/263228/D7E2D9?text=Logo',
+      logoUrl: LOGO_URL,
       backgroundColor: '#263228',
       textColor: '#FFFFFF',
       align: 'center',
@@ -35,7 +40,7 @@ const BLOCK_TYPE_DESCRIPTORS: {
   hero: {
     label: 'Hero-баннер',
     createContent: () => ({
-      imageUrl: 'https://placehold.co/560x240/4A9E46/FFFFFF?text=Hero',
+      imageUrl: HERO_URL,
       alt: 'Изображение баннера',
       headline: 'Заголовок баннера',
       subheadline: 'Подзаголовок баннера',
@@ -68,7 +73,7 @@ const BLOCK_TYPE_DESCRIPTORS: {
   productCard: {
     label: 'Карточка товара',
     createContent: () => ({
-      imageUrl: 'https://placehold.co/240x160/4A9E46/FFFFFF?text=Game',
+      imageUrl: PRODUCT_URL,
       alt: 'Изображение товара',
       name: 'Название товара',
       description: 'Короткое описание товара.',
